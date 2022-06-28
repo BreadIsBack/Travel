@@ -1,0 +1,143 @@
+.offer {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__img-box {
+    position: relative;
+    margin-right: 150px;
+    z-index: 2;
+    flex: 0 0 auto;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -55px;
+      right: -55px;
+      width: 142px;
+      height: 142px;
+      z-index: -1;
+      background-color: #ffca45;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: -78px;
+      bottom: -78px;
+      width: 170px;
+      height: 170px;
+      z-index: -1;
+      background-image: url('../img/beacon-dots.svg');
+    }
+  }
+
+  &__img-inner {
+    overflow: hidden;
+  }
+
+  &__img {
+    filter: drop-shadow(-27px 50px 15px #d3e2ff);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 82px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 65px;
+    color: var(--color-main);
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #000;
+  }
+
+  &__descr {
+    margin: 0;
+  }
+}
+
+.tabs {
+  &__nav {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  &__nav-btn {
+    &:focus {
+      background-color: transparent;
+    }
+
+    &--active {
+      .offer__subtitle {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    padding-left: 90px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 50px;
+      top: -5px;
+      left: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &--red {
+      &::before {
+        background-image: url('../img/offer-1.svg');
+      }
+    }
+
+    &--green {
+      &::before {
+        background-image: url('../img/offer-2.svg');
+      }
+    }
+
+    &--orange {
+      &::before {
+        background-image: url('../img/offer-3.svg');
+      }
+    }
+  }
+
+  &__nav-item {
+    margin-bottom: 25px;
+    max-width: 690px;
+  }
+
+  &__panel {
+    margin-bottom: 96px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--color-text);
+  }
+}

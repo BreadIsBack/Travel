@@ -1,0 +1,41 @@
+.app {
+  background-image: url('../img/app-bg.jpg');
+
+  &__section {
+    margin-bottom: 180px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 60px;
+    max-width: 550px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 65px;
+    color: var(--color-main);
+  }
+
+  &__link {
+    display: inline-block;
+    width: 203px;
+    height: 60px;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    &--google {
+      background-image: url('../img/app-1.svg');
+    }
+
+    &--appstore {
+      background-image: url('../img/app-2.svg');
+    }
+  }
+}

@@ -1,0 +1,151 @@
+.footer {
+
+  a {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--color-text);
+  }
+
+  &__container {
+    padding-bottom: 127px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #f5ebe9;
+  }
+
+  &__logo {
+    margin-bottom: 6px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--color-text);
+  }
+
+  &__info-item {
+    position: relative;
+    padding-left: 37px;
+
+    &--flex {
+      display: flex;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 22px;
+      height: 22px;
+      top: 5px;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--phone {
+      &::before {
+        background-image: url('../img/phone.svg');
+      }
+    }
+
+    &--envelope {
+      &::before {
+        height: 18px;
+        background-image: url('../img/envelope.svg');
+      }
+    }
+
+    &--site {
+      &::before {
+        background-image: url('../img/site.svg');
+      }
+    }
+  }
+
+  &__tel {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 26px;
+    color: #000;
+  }
+
+  &__links-item,
+  &__support-item {
+    position: relative;
+    padding-left: 25px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 2px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('../img/footer-line.svg');
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    outline: transparent;
+    width: 400px;
+    height: 60px;
+    border: 1px solid #f5ebe9;
+    background-color: #dfdfdf;
+    resize: none;
+  }
+
+  &__btn {
+    width: 200px;
+  }
+
+  &__copyright {
+    margin: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--color-text);
+  }
+
+  &__copy-decor {
+    color: var(--color-primary);
+  }
+}
